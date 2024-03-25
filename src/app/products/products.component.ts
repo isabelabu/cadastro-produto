@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { product } from '../products';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -7,6 +8,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
+
+  products : product[] = [];
 
   formGroupProduct : FormGroup
 
@@ -18,6 +21,10 @@ export class ProductsComponent {
       preco : [''],
       qtd : [''],
     })
+  }
+
+  save(){
+    this.products.push(this.formGroupProduct.value);
   }
 }
 

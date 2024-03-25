@@ -56,10 +56,33 @@
         <button
           type="submit"
           class="btn btn-block btn-success mb-3 container-fluid mt-4"
+          (click)="save()"
         >
           Cadastrar
         </button>
       </form>
+      <h3 class="mt-4 text-center">Produtos</h3>
+      <table class="table mt-5 table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Preço (R$)</th>
+            <th scope="col">Quantidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <th scope="row">{{ product.id }}</th>
+            <td>{{ product.nome }}</td>
+            <td>{{ product.descricao }}</td>
+            <td>{{ product.preco }}</td>
+            <td>{{ product.qtd }}</td>
+          </tr>
+        </tbody>
+      </table>
+
     </div>
   </div>
 </div>
