@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-products',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
 
+  formGroupProduct : FormGroup
+
+  constructor(private formBuilder : FormBuilder){
+    this.formGroupProduct = formBuilder.group({
+      id : [''],
+      nome : [''],
+      descricao : [''],
+      preco : [''],
+      qtd : [''],
+    })
+  }
 }
+
+

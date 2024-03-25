@@ -1,16 +1,16 @@
 <div class="container bg-light mt-4">
   <div class="row">
     <div class="col-9 m-auto p-4">
-      <form class="p-4">
+      <form [formGroup]="formGroupProduct" class="p-4">
         <h2 class="text-center">CADASTRAR PRODUTO</h2>
         <div class="row justify-items-center mt-4">
           <div class="col-3">
             <label for="id">ID</label>
-            <input id="id" name="id" type="text" class="form-control" />
+            <input formControlName="id" id="id" name="id" type="text" class="form-control" />
           </div>
           <div class="col-9">
             <label for="nome">Nome</label>
-            <input id="nome" name="nome" type="text" class="form-control" />
+            <input formControlName="nome" id="nome" name="nome" type="text" class="form-control" />
           </div>
         </div>
         <label class="mt-4" for="descricao">Descrição</label>
@@ -19,6 +19,7 @@
           name="descricao"
           id="descricao"
           rows="4"
+          formControlName="descricao"
         ></textarea>
         <div class="row mt-4 justify-content-center">
           <div class="col-6">
@@ -33,6 +34,7 @@
                 id="preco"
                 name="preco"
                 class="form-control"
+                formControlName="preco"
               />
               <div class="input-group-append">
                 <span class="input-group-text">,00</span>
@@ -47,6 +49,7 @@
               type="number"
               min="0"
               class="form-control"
+              formControlName="qtd"
             />
           </div>
         </div>
