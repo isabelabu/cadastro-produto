@@ -4,11 +4,7 @@
       <form [formGroup]="formGroupProduct" class="p-4">
         <h2 class="text-center">CADASTRAR PRODUTO</h2>
         <div class="row justify-items-center mt-4">
-          <div class="col-3">
-            <label for="id">ID</label>
-            <input formControlName="id" id="id" name="id" type="text" class="form-control" />
-          </div>
-          <div class="col-9">
+          <div class="col-12">
             <label for="nome">Nome</label>
             <input formControlName="nome" id="nome" name="nome" type="text" class="form-control" />
           </div>
@@ -70,6 +66,7 @@
             <th scope="col">Descrição</th>
             <th scope="col">Preço (R$)</th>
             <th scope="col">Quantidade</th>
+            <th scope="col" class="text-center">Opções</th>
           </tr>
         </thead>
         <tbody>
@@ -79,6 +76,10 @@
             <td>{{ product.descricao }}</td>
             <td>{{ product.preco }}</td>
             <td>{{ product.qtd }}</td>
+            <td class="d-flex justify-content-center">
+              <button type="button" class="btn btn-danger me-2" (click)="delete(product)">Remover</button>
+              <button type="button" class="btn btn-primary" (click)="edit(product)">Alterar</button>
+            </td>
           </tr>
         </tbody>
       </table>

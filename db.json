@@ -22,11 +22,11 @@
       "qtd": 5
     },
     {
-      "id": 4,
-      "nome": "teste",
-      "descricao": "teste",
+      "id": 5,
+      "nome": "teste sem id",
+      "descricao": "eba",
       "preco": 1,
-      "qtd": 133
+      "qtd": 1
     }
   ]
 }
