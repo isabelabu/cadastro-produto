@@ -7,6 +7,12 @@
           <div class="col-12">
             <label for="nome">Nome</label>
             <input formControlName="nome" id="nome" name="nome" type="text" class="form-control" />
+            <small *ngIf="enviado && nome.hasError('required')" class="text-danger">
+              *O campo é obrigatório
+            </small>
+            <small *ngIf="enviado && nome.hasError('minlength')" class="text-danger">
+              *O nome precisa ter no mínimo 3 caracteres
+            </small>
           </div>
         </div>
         <label class="mt-4" for="descricao">Descrição</label>
@@ -17,6 +23,12 @@
           rows="4"
           formControlName="descricao"
         ></textarea>
+        <small *ngIf="enviado && descricao.hasError('required')" class="text-danger">
+          *O campo é obrigatório
+        </small>
+        <small *ngIf="enviado && descricao.hasError('minlength')" class="text-danger">
+          *A descrição precisa ter no mínimo 10 caracteres
+        </small>
         <div class="row mt-4 justify-content-center">
           <div class="col-6">
             <label for="preco">Preço</label>
@@ -36,6 +48,9 @@
                 <span class="input-group-text">,00</span>
               </div>
             </div>
+            <small *ngIf="enviado && preco.hasError('required')" class="text-danger">
+              *O campo é obrigatório
+            </small>
           </div>
           <div class="col-6">
             <label for="qtd">Quantidade</label>
@@ -47,6 +62,9 @@
               class="form-control"
               formControlName="qtd"
             />
+            <small *ngIf="enviado && qtd.hasError('required')" class="text-danger">
+              *O campo é obrigatório
+            </small>
           </div>
         </div>
         <button

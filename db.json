@@ -27,6 +27,13 @@
       "descricao": "eba",
       "preco": 1,
       "qtd": 1
+    },
+    {
+      "id": 6,
+      "nome": "Teste2",
+      "descricao": "Teste com restrições",
+      "preco": 1,
+      "qtd": 1
     }
   ]
 }
